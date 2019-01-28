@@ -1,0 +1,258 @@
+
+/*-----------初始化css---------*/
+body, div, ul, ol, li, h1, h2, h3, h4, h5, h6, img, p, dl, dt, dd, th, tr, td, form, input, button, fieldset, legend, textarea, blockquote {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    height: 100%;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+body {
+    height: 100%;
+    background: #f0f2f5;
+    color: #555;
+    font-size: 14px;
+    font-family: Microsoft YaHei, Verdana, Arial, Helvetica, sans-serif;
+}
+
+td, th, caption {
+    font-size: 14px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: normal;
+    font-size: 100%;
+}
+
+address, caption, cite, code, dfn, em, i, strong, th, var {
+    font-style: normal;
+    font-weight: normal;
+}
+
+a {
+    color: #b5f5ec;
+    text-decoration: none;
+}
+
+a:hover {
+    /*text-decoration: underline;*/
+    text-decoration: none;
+    color: #13c2c2;
+}
+
+p {
+    word-wrap: break-word;
+}
+
+select, input, img, select {
+    border: none;
+    vertical-align: middle;
+}
+
+ul, ol {
+    list-style: none;
+}
+
+li {
+    list-style-type: none;
+}
+
+input, textarea, select, button {
+    font: 14px Verdana, Helvetica, Arial, sans-serif;
+}
+
+table {
+    border-collapse: collapse;
+}
+
+.clearfix:after {
+    content: ".";
+    display: block;
+    font-size: 0;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+}
+
+.clearfix {
+    *zoom: 1;
+}
+
+.fl {
+    float: left!important;
+}
+
+.fr {
+    float: right!important;
+}
+
+.container-fluid, .container, .row {
+    padding: 0;
+    margin: 0;
+}
+
+.pd0 {
+    padding: 0;
+}
+
+/*-------------init end-----------------*/
+
+
+/*------------layer----------------*/
+.layui-layer-molv .layui-layer-btn a {
+    background: #08979c!important;
+    border-color: #08979c!important;
+}
+
+.layui-layer-title {
+    background: #08979c!important; 
+    color: #fff!important;
+    border: none!important;
+}
+
+.layui-layer-btn .layui-layer-btn0 {
+    background: #08979c!important; 
+    border-color: #08979c!important;
+    color: #fff!important;
+}
+
+.layui-layer-btn .layui-layer-btn1 {
+    background: #fff!important; 
+    border-color: #dedede!important;
+    color: #000!important;
+}
+
+/*------------layer end----------------*/
+
+
+
+/*----------------logo-------------*/
+.logo {
+    padding: 5px 20px;
+}
+
+.logo-box {
+    background-color: #006d75;
+    padding: 5px 20px;
+    height: 50px;
+}
+
+.logo img {
+    width: 40px;
+    height: 40px;
+}
+
+.logo a {
+    display: inline-block;
+}
+
+.logo span {
+    padding-left: 20px;
+    font-family: "Microsoft YaHei", Simsun, serif;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 39px;
+    color: #fff;
+}
+
+/*---------------nav left---------*/
+.nav-left {
+    padding: 0;
+    background-color: #00474f;
+    position: fixed;
+    top: 50px;
+    left: 0;
+    height: 100%;
+    overflow: hidden;
+    z-index: 99999;
+}
+
+.nav-box {
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: -3px;
+    bottom: 0;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    margin-right: -10px;
+    margin-top: -15px;
+    padding-bottom: 160px;
+    padding-top: 16px;
+}
+
+.nav-left li.active {
+    background-color: #003b47;
+}
+
+.nav-left li a {
+    display: block;
+    padding: 15px 20px;
+}
+
+.nav-left li a i {
+    width: 18px;
+}
+
+@media (max-width: 575px) {
+    .nav-left,
+    .heard-left {
+        display: none;
+    }
+}
+
+
+/*---------------------------------*/
+
+
+/*---------------heard-------------*/
+
+.heard-row {
+    height: 50px;
+}
+
+.heard {
+    width: 100%;
+    /*background-color: #006d75;*/
+    /*background-image: linear-gradient(45deg, #006d75, #13c2c2 50%, #006d75);*/
+    background: repeating-linear-gradient(-45deg, #006d75, #006d75 1px, #13c2c2 1px, #13c2c2 2px);
+    height: 50px;
+    position: fixed;
+    z-index: 99999;
+}
+
+.heard-left {
+    direction: rtl;
+    text-align: right;
+}
+
+.heard-left .title {
+    /*display: inline-block;*/
+    /*width: 100%;*/
+    /*height: 50px;*/
+    line-height: 50px;
+    /*text-align: right;*/
+    font-size: 15px;
+    color: #fff;
+}
+
+.heard-left .weather {
+    height: 50px;
+    line-height: 50px;
+}
+
+.heard-left .weather span {
+    color: #fff;
+}
+
+/*---------------------------------*/
+
+/*---------------content-----------*/
+.content {
+    margin: 25px;
+    background-color: #fff;
+}

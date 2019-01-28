@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="zh_CN">
+<head>
+    <meta charset="UTF-8">
+    <title>Note</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="/lib/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/lib/fontAwesome/css/all.min.css">
+    <!-- <link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css"> -->
+    <link rel="stylesheet" href="/lib/layui/dist/css/layui.css">
+
+    <!-- 自己的样式 -->
+    <link rel="stylesheet" href="/css/base.css">
+    <link rel="stylesheet" href="/css/index.css">
+
+
+
+    <script src="/lib/jquery/dist/jquery.min.js"></script>
+    <script src="/lib/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="/lib/angular/angular.min.js"></script>
+    <script src="/lib//angular-ui-router/release/angular-ui-router.min.js"></script>
+    <script src="/lib/layui/dist/layui.all.js"></script>
+
+
+</head>
+<body ng-app='app'>
+<div class="page index" ng-controller='appCont'>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12 pd0">
+
+                <div class="row pd0 heard-row">
+                    <div class="heard row">
+                        <div class="col-md-6 col-sm-6 pd0">
+                            <div class="logo">
+                                <a href="http://www.baidu.com" target="_blank">
+                                    <img src="/images/logo.png" alt="logo">
+                                </a>
+                                <span>笔记积累</span>
+                            </div>
+                        </div>
+
+                        <div class="heard-left col-md-6 col-sm-6">
+                            <div class="weather fl">
+                                <span ng-cloak>{{weatherObj.data.lives[0].city}}</span>
+                                <span ng-cloak>{{weatherObj.data.lives[0].weather}}</span>
+                                <span ng-cloak>{{weatherObj.data.lives[0].temperature}}℃<i class="fas fa-"></i></span>
+                                <span ng-cloak>{{weatherObj.data.lives[0].winddirection}}风{{weatherObj.data.lives[0].windpower}}级</span>
+                            </div>
+                            <span class="title">开心学习，快乐生活</span>
+                            <span class="title">^_^</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-2 col-sm-3 col-xs-3  nav-left">
+                        <div class="nav-box">
+                            <ul>
+                                <!-- <li>
+                                    <a href="#"><i class="fas fa-list" aria-hidden="true"></i> 类别管理</a>
+                                </li> -->
+
+                                <%for(var i=0;i<list.length;i++){%>
+                                <!-- <li> -->
+                                <li ng-class="" data-name="<%=list[i].href%>">
+                                    <a href="javascript:;" ui-sref='<%=list[i].href%>'><i class="fas fa-<%=list[i].licon%>" aria-hidden="true"></i> <%=list[i].lname%></a>
+                                </li>
+                                <%}%>
+                                
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="col-md-2 col-sm-3 col-xs-3"></div>
+
+                    <div class="col-md-10 col-sm-9 col-xs-9 pd0">
+                        <div class="row">
+                            <div class="col-md-12 pd0">
+                                <div class="content">
+
+                                    <div ui-view></div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<script type="text/javascript" src="/js/index.js"></script>
+<script type="text/javascript" src="/js/controller.js"></script>
+
+</body>
+</html>
