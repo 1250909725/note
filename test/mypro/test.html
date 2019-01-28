@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="">
+    <script type="text/javascript" src="jquery-3.0.0.min.js"></script>
+    <style>
+        #test01,#test02{
+            width: 300px;
+            height: 200px;
+
+        }
+    </style>
+
+</head>
+<body>
+<div>
+
+    <div id="test01">
+        <ul>
+            <li><a href="javascript:void(0);"><img src="../images/j20.jpg" alt="img"></a></li>
+            <li><a href="javascript:void(0);"><img src="../images/j18.jpg" alt="img"></a></li>
+            <li><a href="javascript:void(0);"><img src="../images/j20.jpg" alt="img"></a></li>
+            <li><a href="javascript:void(0);"><img src="../images/j21.jpg" alt="img"></a></li>
+            <li><a href="javascript:void(0);"><img src="../images/j22.jpg" alt="img"></a></li>
+            <li><a href="javascript:void(0);"><img src="../images/j23.jpg" alt="img"></a></li>
+        </ul>
+    </div>
+
+    <div id="test02">
+        <ul>
+            <li><a href="javascript:void(0);"><img src="../images/j21.jpg" alt="img"></a></li>
+            <li><a href="javascript:void(0);"><img src="../images/j18.jpg" alt="img"></a></li>
+            <li><a href="javascript:void(0);"><img src="../images/j20.jpg" alt="img"></a></li>
+            <li><a href="javascript:void(0);"><img src="../images/j21.jpg" alt="img"></a></li>
+            <li><a href="javascript:void(0);"><img src="../images/j22.jpg" alt="img"></a></li>
+            <li><a href="javascript:void(0);"><img src="../images/j23.jpg" alt="img"></a></li>
+        </ul>
+    </div>
+
+</div>
+
+<script type="text/javascript" src="slideShow.js"></script>
+<script type="text/javascript">
+    var slide=new SlideShow({
+        id:"test01",
+        auto:false,
+        width:600,
+        height:300,
+        slideTime:111,
+        changeTime:222
+    });
+    var slide2=new SlideShow({
+        id:"test02",
+        slideTime:333,
+        changeTime:444
+    });
+
+    console.log(slide,slide2);
+</script>
+</body>
+</html>
