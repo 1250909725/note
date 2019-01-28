@@ -3,6 +3,7 @@ var express = require('express');
 var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
+var http = require('http');
 
 // var indexRouter = require('./routes/index');
 // var usersRouter = require('./routes/users');
@@ -24,13 +25,27 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
-// app.use('/', indexRouter);
+// app.use('/', index);
 // app.use('/users', usersRouter);
 
 
 app.use('/index', index);
 
 app.use('/cusser', require('./routes/cusser.js'));
+
+
+
+
+app.use('/', function(req, res){
+	var path = req.path;
+	// console.log(path);
+	if (path === '' || path === '/' || path === 'index') {
+        res.redirect('index');
+	} else {
+		// res.send('页面不存在');
+		res.status(404).send('没有这个页面！');
+	}
+});
 
 
 // catch 404 and forward to error handler

@@ -11,7 +11,8 @@ router.get('/', function(req, res, next) {
 		
 		connection.query(sql, function(err, results){
 			if(err)	{
-				throw err;
+				// throw err;
+				res.send('数据获取出错');
 			}else{
 				res.render('index', {'list':results});
 			}
