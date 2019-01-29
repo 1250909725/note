@@ -28,10 +28,13 @@ app.controller('usersController',['$scope', '$rootScope', '$http', '$state', '$s
 				console.log(data);
 				$scope.delUserResult = data;
 			}, function errorCallback(response) {
-		        console.log('删除错误');
+		        console.log('用户删除错误');
 		    });
 
-		    location.reload(true);
+		    // location.reload(true);
+
+			window.location.href=window.location.href; 
+			window.location.reload();
 
 			layer.close(index);
 		});
